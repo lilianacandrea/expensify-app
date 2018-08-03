@@ -26,7 +26,9 @@ module.exports = {
     },
     devtool: 'cheap-module-eval-source-map',
     devServer: {
-      contentBase: path.join(__dirname, 'public')
+      contentBase: path.join(__dirname, 'public'),
+      // This tells the devServer that we're going to be handling routing via our client side code and that it should return this page for all routes.
+      historyApiFallback: true
     }
 };
 
